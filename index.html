@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saksham Khadka | Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/5ae6092815.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+
+<!-- ================= Header ================= -->
+<header id="header">
+  <div class="container">
+    <nav>
+      <img src="logo web.png" class="logo" alt="Logo">
+      <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+
+    <div class="header-text">
+      <p>Web Developer & UI/UX Designer</p>
+      <h1>Hi, I'm <span>Saksham</span><br>From Nepal</h1>
+    </div>
+  </div>
+</header>
+
+<!-- ================= About ================= -->
+<section id="about" class="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="personal img.jpg" alt="Saksham Khadka">
+      </div>
+      <div class="about-col-2">
+        <h2 class="sub-title">About Me</h2>
+        <p>
+          My name is Saksham Khadka. I am a beginner-level web developer and UI/UX designer from Nepal.
+          I enjoy creating responsive, user-friendly websites and continuously improving my skills.
+        </p>
+
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+          <p class="tab-links" onclick="opentab('education', event)">Education</p>
+          <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+        </div>
+
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>HTML & CSS</span><br>Responsive Website Design</li>
+            <li><span>JavaScript</span><br>Basic Interactivity</li>
+            <li><span>UI/UX</span><br>Wireframing & Prototyping</li>
+          </ul>
+        </div>
+
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2026 – Present</span><br>+2 level running</li>
+            <li><span>2024</span><br>SEE level cleared</li>
+          </ul>
+        </div>
+
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>College Projects</span><br>Portfolio Website, JS Mini Projects</li>
+            <li><span>Self Learning</span><br>Frontend Development Practice</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Services ================= -->
+<section id="services">
+  <div class="container">
+    <h2 class="sub-title">My Services</h2>
+    <div class="services-list">
+      <div>
+        <i class="fa-solid fa-code"></i>
+        <h3>Web Development</h3>
+        <p>I build responsive and clean websites using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-pen-nib"></i>
+        <h3>UI/UX Design</h3>
+        <p>I design simple and user-friendly interfaces for web and mobile.</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-laptop"></i>
+        <h3>College Projects</h3>
+        <p>I create academic projects suitable for college submissions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Portfolio ================= -->
+<section id="portfolio">
+  <div class="container">
+    <h2 class="sub-title">My Work</h2>
+    <div class="work-list">
+      <div class="work">
+        <img src="work-1.jpg" alt="Odd Even Project">
+        <div class="layer">
+          <h3>Odd / Even Checker</h3>
+          <p>JavaScript project to check odd or even numbers.</p>
+        </div>
+      </div>
+      <div class="work">
+        <img src="form check.png" alt="Form Check">
+        <div class="layer">
+          <h3>Form check</h3>
+          <p>Displays Validation of form.</p>
+        </div>
+      </div>
+      <div class="work">
+        <img src="work-3.jpg" alt="Prime Number Checker">
+        <div class="layer">
+          <h3>Prime Number Checker</h3>
+          <p>Checks whether a number is prime or not.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Contact ================= -->
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h2 class="sub-title">Contact Me</h2>
+        <p><i class="fa-solid fa-envelope"></i> saksham144@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> +977-9769360703</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/sakshyamboss.boss" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/saksham_khadka1821/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@animeengdub9961" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://github.com/saksham0cloud" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <!-- modify this form HTML and place wherever you want your form -->
+          <form id="contact-form" action="https://formspree.io/f/xlglqarj" method="POST" class="space-y-6">
+       <div class="grid md:grid-cols-2 gap-6">
+        <div><label for="name" class="block text-sm font-medium text-gray-800 mb-2">Name</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-white border-2 border-gray-300 sketchy-border focus:outline-none focus:border-blue-700 focus:ring-2 focus:ring-blue-300 transition-all text-gray-800 placeholder-gray-500" placeholder="Your name">
+        </div>
+        <div><label for="email" class="block text-sm font-medium text-gray-800 mb-2">Email</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-white border-2 border-gray-300 sketchy-border focus:outline-none focus:border-blue-700 focus:ring-2 focus:ring-blue-300 transition-all text-gray-800 placeholder-gray-500" placeholder="your@email.com">
+        </div>
+       </div>
+       <div><label for="subject" class="block text-sm font-medium text-gray-800 mb-2">Subject</label> <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 bg-white border-2 border-gray-300 sketchy-border focus:outline-none focus:border-blue-700 focus:ring-2 focus:ring-blue-300 transition-all text-gray-800 placeholder-gray-500" placeholder="Backend help needed...">
+       </div>
+       <div><label for="message" class="block text-sm font-medium text-gray-800 mb-2">Message</label> <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-white border-2 border-gray-300 sketchy-border focus:outline-none focus:border-blue-700 focus:ring-2 focus:ring-blue-300 transition-all text-gray-800 placeholder-gray-500 resize-none" placeholder="Tell me about your project..."></textarea>
+       </div><input type="hidden" name="_next" value="#contact"><input type="hidden" name="_captcha" value="false"> <button type="submit" id="submit-btn" class="w-full py-4 sketchy-border font-semibold text-lg text-white bg-gradient-to-r from-blue-700 to-blue-800 hover:opacity-90 transition-all animate-pulse-glow"> Send Message 📨 </button>
+      </form>
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>© 2026 Saksham Khadka | College Portfolio</p>
+  </div>
+</section>
+
+<!-- ================= JavaScript ================= -->
+<script>
+  let tablinks = document.getElementsByClassName("tab-links");
+  let tabcontents = document.getElementsByClassName("tab-contents");
+
+  function opentab(tabname, event) {
+    for (let tablink of tablinks) {
+      tablink.classList.remove("active-link");
+    }
+    for (let tabcontent of tabcontents) {
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+
+  let sidemenu = document.getElementById("sidemenu");
+  function openmenu() {
+    sidemenu.style.right = "0";
+  }
+  function closemenu() {
+    sidemenu.style.right = "-200px";
+  }
+</script>
+
+</body>
+</html>
