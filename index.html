@@ -11,7 +11,7 @@
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/5ae6092815.js" crossorigin="anonymous" defer></script>
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -32,7 +32,9 @@
         <li><a href="#contact">Contact</a></li>
         <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
       </ul>
-      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    <button class="menu-btn" onclick="openmenu()">
+  <i class="fa-solid fa-bars"></i>
+</button>
     </nav>
 
     <div class="header-text">
@@ -261,6 +263,9 @@ My goal is to help businesses grow through clean design and efficient web soluti
   </div>
 
 </div>
+    </div> 
+</div> 
+</section> 
 <!-- ================= Contact ================= -->
 <section id="contact">
   <div class="container">
@@ -367,9 +372,6 @@ My goal is to help businesses grow through clean design and efficient web soluti
   }
 </script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
   var typed = new Typed("#typing", {
@@ -409,12 +411,10 @@ My goal is to help businesses grow through clean design and efficient web soluti
   });
 </script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true
-  });
-</script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
 </body>
 </html>
 
