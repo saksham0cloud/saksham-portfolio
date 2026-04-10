@@ -94,7 +94,33 @@ body::before {
 #header {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(sasa.png) center/cover no-repeat;
+  position: relative;
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("sasa.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+@media (max-width: 768px) {
+  #header {
+    background-attachment: scroll;
+  }
+}
+.parallax-layer {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: var(--primary);
+  filter: blur(120px);
+  opacity: 0.2;
+  top: 20%;
+  left: 10%;
+  animation: floatParallax 6s infinite ease-in-out;
+}
+
+@keyframes floatParallax {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(50px); }
+  100% { transform: translateY(0px); }
 }
 
 nav {
