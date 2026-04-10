@@ -11,6 +11,7 @@
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/5ae6092815.js" crossorigin="anonymous" defer></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -120,25 +121,25 @@ My goal is to help businesses grow through clean design and efficient web soluti
 
     <div class="why-list">
       
-      <div class="why-card">
+      <div class="why-card" data-aos="fade-up">
         <i class="fa-solid fa-bolt"></i>
         <h3>Fast Performance</h3>
         <p>Optimized websites for speed, SEO, and smooth user experience.</p>
       </div>
 
-      <div class="why-card">
+      <div class="why-card" data-aos="fade-up">
         <i class="fa-solid fa-mobile-screen"></i>
         <h3>Fully Responsive</h3>
         <p>Looks perfect on mobile, tablet, and desktop devices.</p>
       </div>
 
-      <div class="why-card">
+      <div class="why-card" data-aos="fade-up">
         <i class="fa-solid fa-pen-ruler"></i>
         <h3>Modern UI Design</h3>
         <p>Clean, attractive, and user-focused interface design.</p>
       </div>
 
-      <div class="why-card">
+      <div class="why-card" data-aos="fade-up">
         <i class="fa-solid fa-comments"></i>
         <h3>Clear Communication</h3>
         <p>Quick response and easy collaboration during projects.</p>
@@ -242,7 +243,10 @@ My goal is to help businesses grow through clean design and efficient web soluti
     sidemenu.style.right = "-200px";
   }
 </script>
-
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
 
