@@ -61,7 +61,7 @@ body {
 #header {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(img\ 1.jpg) center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(sasa.png) center/cover no-repeat;
 }
 
 nav {
