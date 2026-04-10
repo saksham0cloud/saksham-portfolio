@@ -217,6 +217,7 @@ My goal is to help businesses grow through clean design and efficient web soluti
           <button type="submit" class="btn">Send Message 🚀</button>
 
         </form>
+       <p id="msg"></p>
       </div>
 
     </div>
@@ -279,6 +280,15 @@ My goal is to help businesses grow through clean design and efficient web soluti
     typeSpeed: 50,
     backSpeed: 30,
     loop: true
+  });
+</script>
+  <script>
+  const form = document.querySelector("form");
+  const msg = document.getElementById("msg");
+
+  form.addEventListener("submit", function () {
+    msg.innerHTML = "Message sent successfully ✅";
+    setTimeout(() => msg.innerHTML = "", 3000);
   });
 </script>
 </body>
