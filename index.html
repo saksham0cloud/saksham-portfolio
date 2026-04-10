@@ -19,7 +19,7 @@
 
 <!-- ================= Header ================= -->
 <header id="header">
-  <canvas id="bg"></canvas>
+  
    <div class="parallax-layer"></div>
   <div class="container">
     <nav>
@@ -417,86 +417,7 @@ AOS.init({
   duration: 1000,
   once: true
 });
-  <script>
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(
-  75,
-  window.innerWidth / window.innerHeight,
-  0.1,
-  1000
-);
-
-const renderer = new THREE.WebGLRenderer({
-  canvas: document.getElementById("bg"),
-  alpha: true
-});
-
-renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.z = 5;
-
-// 🔵 Particle Geometry
-const particlesGeometry = new THREE.BufferGeometry();
-const particlesCount = 1500;
-
-const positions = new Float32Array(particlesCount * 3);
-
-for (let i = 0; i < particlesCount * 3; i++) {
-  positions[i] = (Math.random() - 0.5) * 10;
-}
-
-particlesGeometry.setAttribute(
-  "position",
-  new THREE.BufferAttribute(positions, 3)
-);
-
-// 🔴 Material
-const particlesMaterial = new THREE.PointsMaterial({
-  color: 0xff004f,
-  size: 0.02
-});
-
-// ⚪ Points
-const particlesMesh = new THREE.Points(
-  particlesGeometry,
-  particlesMaterial
-);
-
-scene.add(particlesMesh);
-
-// 🖱️ Mouse interaction
-let mouseX = 0;
-let mouseY = 0;
-
-document.addEventListener("mousemove", (event) => {
-  mouseX = event.clientX / window.innerWidth - 0.5;
-  mouseY = event.clientY / window.innerHeight - 0.5;
-});
-
-// 🔁 Animation loop
-function animate() {
-  requestAnimationFrame(animate);
-
-  particlesMesh.rotation.y += 0.001;
-  particlesMesh.rotation.x += 0.001;
-
-  // interactive movement
-  camera.position.x += (mouseX * 2 - camera.position.x) * 0.05;
-  camera.position.y += (-mouseY * 2 - camera.position.y) * 0.05;
-  camera.lookAt(scene.position);
-
-  renderer.render(scene, camera);
-}
-
-animate();
-
-// 📱 Responsive fix
-window.addEventListener("resize", () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-});
-</script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
 </body>
 </html>
 
