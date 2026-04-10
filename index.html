@@ -32,7 +32,7 @@
     </nav>
 
     <div class="header-text">
-  <p>Web Developer | UI Designer | Problem Solver</p>
+  <p><span id="typing"></span></p>
   <h1>Hi, I'm <span>Saksham</span><br>I build fast, modern websites that help businesses grow online.</h1>
   
   <a href="#contact" class="btn">Hire Me 🚀</a>
@@ -246,6 +246,21 @@ My goal is to help businesses grow through clean design and efficient web soluti
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init();
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+  var typed = new Typed("#typing", {
+    strings: [
+      "Web Developer 💻",
+      "UI Designer 🎨",
+      "Problem Solver ⚡",
+      "Frontend Developer 🚀"
+    ],
+    typeSpeed: 50,
+    backSpeed: 30,
+    backDelay: 1500,
+    loop: true
+  });
 </script>
 </body>
 </html>
