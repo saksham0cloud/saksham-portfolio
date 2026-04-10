@@ -112,6 +112,10 @@ nav ul li a:hover::after {
 .header-text h1 span {
   color: var(--primary);
 }
+.btn:hover {
+  background: #ff1a63;
+  transform: scale(1.05);
+}
 
 /* ---------- About ---------- */
 .about {
@@ -207,6 +211,17 @@ nav ul li a:hover::after {
 .services-list i {
   font-size: 40px;
   margin-bottom: 20px;
+}
+.services-list div {
+  text-align: center;
+}
+
+.services-list i {
+  color: var(--primary);
+}
+.services-list div,
+.work {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 /* ---------- Portfolio ---------- */
