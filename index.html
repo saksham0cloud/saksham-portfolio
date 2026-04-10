@@ -197,10 +197,10 @@ My goal is to help businesses grow through clean design and efficient web soluti
   <div class="container">
     <div class="row">
 
-      <!-- LEFT SIDE -->
+      <!-- LEFT -->
       <div class="contact-left">
-        <h2 class="sub-title">Let's Work Together 🚀</h2>
-        <p>Have a project in mind? Feel free to reach out. I’ll respond quickly!</p>
+        <h2 class="sub-title">Let’s Work Together 🚀</h2>
+        <p>I’m open to freelance work and collaborations. Let’s build something amazing!</p>
 
         <p><i class="fa-solid fa-envelope"></i> saksham144@gmail.com</p>
         <p><i class="fa-solid fa-phone"></i> +977-9769360703</p>
@@ -211,27 +211,31 @@ My goal is to help businesses grow through clean design and efficient web soluti
           <a href="https://github.com/saksham0cloud" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
 
-        <a href="Saksham_Khadka_CV.pdf" download class="btn">Download CV 📄</a>
+        
       </div>
 
-      <!-- RIGHT SIDE -->
+      <!-- RIGHT -->
       <div class="contact-right">
-        <form action="https://formspree.io/f/xlglqarj" method="POST">
+        <form id="contact-form" action="https://formspree.io/f/xlglqarj" method="POST">
 
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
-          <input type="text" name="subject" placeholder="Subject">
+          <input type="text" name="subject" placeholder="Project Subject">
 
-          <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+          <textarea name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
 
           <button type="submit" class="btn">Send Message 🚀</button>
 
         </form>
-       <p id="msg"></p>
+
+        <p id="msg"></p>
       </div>
 
     </div>
   </div>
+  <a href="https://wa.me/9779769360703" class="whatsapp" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
   <div class="copyright">
     <p>© 2026 Saksham Khadka | All Rights Reserved</p>
@@ -292,13 +296,15 @@ My goal is to help businesses grow through clean design and efficient web soluti
     loop: true
   });
 </script>
-  <script>
-  const form = document.querySelector("form");
+ <script>
+  const form = document.getElementById("contact-form");
   const msg = document.getElementById("msg");
 
   form.addEventListener("submit", function () {
     msg.innerHTML = "Message sent successfully ✅";
-    setTimeout(() => msg.innerHTML = "", 3000);
+    setTimeout(() => {
+      msg.innerHTML = "";
+    }, 3000);
   });
 </script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
