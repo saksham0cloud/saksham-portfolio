@@ -12,6 +12,7 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/5ae6092815.js" crossorigin="anonymous" defer></script>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -47,11 +48,11 @@
 <section id="about" class="about">
   <div class="container">
     <div class="row">
-      <div class="about-col-1">
-        <img src="personal img.jpg" alt="Saksham Khadka">
-      </div>
-      <div class="about-col-2">
-        <h2 class="sub-title">About Me</h2>
+     <div class="about-col-1" data-aos="fade-right">
+  <img src="personal img.jpg" alt="Saksham Khadka">
+</div>
+     <div class="about-col-2" data-aos="fade-left">
+        <h2 class="sub-title" data-aos="fade-down">About Me</h2>
         <p>
       I'm a passionate frontend developer from Nepal focused on building fast, responsive, and visually appealing websites. 
 
@@ -59,14 +60,14 @@ I love turning ideas into real-world projects and continuously improving my skil
 
 My goal is to help businesses grow through clean design and efficient web solutions.
         </p>
-
+<p data-aos="fade-up">
         <div class="tab-titles">
           <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
           <p class="tab-links" onclick="opentab('education', event)">Education</p>
           <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
         </div>
 
-        <div class="tab-contents active-tab" id="skills">
+      <div class="tab-contents active-tab" id="skills" data-aos="fade-up" data-aos-delay="200">
           <ul>
             <li><span>HTML & CSS</span><br>Responsive Website Design</li>
             <li><span>JavaScript</span><br>Basic Interactivity</li>
@@ -297,6 +298,13 @@ My goal is to help businesses grow through clean design and efficient web soluti
   form.addEventListener("submit", function () {
     msg.innerHTML = "Message sent successfully ✅";
     setTimeout(() => msg.innerHTML = "", 3000);
+  });
+</script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
   });
 </script>
 </body>
