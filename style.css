@@ -443,6 +443,15 @@ nav ul li a:hover::after {
 .whatsapp:hover {
   transform: scale(1.1);
 }
+.top-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: var(--primary);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .header-text h1 {
