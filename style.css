@@ -464,7 +464,10 @@ nav ul li a:hover::after {
   transform: translateY(-8px);
   box-shadow: 0 0 20px rgba(255,0,79,0.4);
 }
-
+.work-card, .service-card {
+  display: block !important;
+  opacity: 1 !important;
+}
 .work-card h3 {
   margin-bottom: 10px;
   color: var(--primary);
