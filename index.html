@@ -164,6 +164,90 @@ My goal is to help businesses grow through clean design and efficient web soluti
     </div>
   </div>
 </section>
+  <!-- ================= SHOP ================= -->
+<section id="shop">
+  <div class="container">
+    <h2 class="sub-title">Chito Online Pashal 🛒</h2>
+    <p style="color: gray; text-align:center; margin-bottom: 40px;">
+      Mobile and tech accessories available  🚀
+    </p>
+    <div class="product-list">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="image-1.jpg">
+        <div class="product-info">
+          <h3>Wireless Earbuds</h3>
+         
+          <p>Rs. 1500</p>
+          <a href="https://wa.me/9779769360703?text=I want Wireless Earbuds">Order Now</a>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="charger.jpg">
+        <div class="product-info">
+          <h3>Fast Charger</h3>
+          
+          <p>Rs. 800</p>
+          <a href="https://wa.me/9779769360703?text=I want Fast Charger">Order Now</a>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="powebank.jpg">
+        <div class="product-info">
+          <h3>Power Bank</h3>
+          
+          <p>Rs. 2000</p>
+          <a href="https://wa.me/9779769360703?text=I want Power Bank">Order Now</a>
+        </div>
+      </div>
+      <!-- Product 4 -->
+      <div class="product-card">
+        <img src="ultimawatch.jpg">
+        <div class="product-info">
+          <h3>Ultimate Watch</h3>
+
+          <p>Rs. 2500</p>
+          <a href="https://wa.me/9779769360703?text=I want Ultimate Watch">Order Now</a>
+        </div>
+      </div>
+      <!-- HIDDEN PRODUCTS -->
+      <div class="extra-products">
+        <div class="product-card">
+          <img src="pavospeaker.jpg">
+          <div class="product-info">
+            <h3>Bluetooth Speaker</h3>
+           
+            <p>Rs. 2500</p>
+            <a href="https://wa.me/9779769360703?text=I want Speaker">Order Now</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="solidheadphone.jpg">
+          <div class="product-info">
+            <h3>Headphones</h3>
+          
+            <p>Rs. 1800</p>
+            <a href="https://wa.me/9779769360703?text=I want Headphones">Order Now</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="boyamike.jpg">
+          <div class="product-info">
+            <h3>mike</h3>
+          
+            <p>Rs. 1800</p>
+            <a href="https://wa.me/9779769360703?text=I want Mike">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <button class="btn" onclick="toggleProducts()" id="toggleBtn">View More</button>
+    </div>
+  </div>
+</section>
   <!-- ================= why me? ================= -->
  <section id="why">
   <div class="container">
@@ -404,6 +488,20 @@ My goal is to help businesses grow through clean design and efficient web soluti
   });
 </script>
 
+   <script>
+function toggleProducts() {
+  const extra = document.querySelector(".extra-products");
+  const btn = document.getElementById("toggleBtn");
+
+  extra.classList.toggle("show");
+
+  if (extra.classList.contains("show")) {
+    btn.innerText = "View Less";
+  } else {
+    btn.innerText = "View More";
+  }
+}
+</script>
   
 </body>
 </html>
