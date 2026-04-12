@@ -384,6 +384,87 @@ nav ul li a:hover::after {
 .service-card:hover::before {
   width: 100%;
 }
+/* ---------- SHOP (UPDATED GRID FIX) ---------- */
+#shop {
+  padding: 80px 0;
+}
+
+/* MAIN GRID → 4 items per row */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* PRODUCT CARD */
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  transition: 0.4s;
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* HOVER INFO */
+.product-info {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  text-align: center;
+}
+
+.product-card:hover .product-info {
+  bottom: 0;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,0,79,0.4);
+}
+
+/* 🔥 FIX: MAKE HIDDEN ITEMS JOIN SAME GRID */
+.extra-products {
+  display: contents;
+}
+
+/* HIDE initially */
+.extra-products .product-card {
+  display: none;
+}
+
+/* SHOW on click */
+.extra-products.show .product-card {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
 /* ---------- why me? ---------- */
 #why {
   padding: 80px 0;
