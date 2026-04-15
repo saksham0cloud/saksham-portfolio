@@ -20,28 +20,33 @@
 <!-- ================= Header ================= -->
 <header id="header">
   
-   <div class="parallax-layer"></div>
+  <div class="parallax-layer"></div>
+
+  <!-- 🔥 BLUR OVERLAY -->
+  <div id="menu-overlay" onclick="closemenu()"></div>
+
   <div class="container">
     <nav>
-      <div class="logo-container">
-  <img src="weblogo.png" alt="Saksham Logo">
-</div>
+      <img src="weblogo.png" class="logo" alt="Logo">
+
       <ul id="sidemenu">
         <li><a href="#header">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#daily">Daily work</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#shop">Shop</a></li>
         <li><a href="#why">Why me?</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
+
+        <!-- CLOSE BUTTON -->
         <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
       </ul>
-    <button class="menu-btn" onclick="openmenu()">
-  <i class="fa-solid fa-bars"></i>
-</button>
-    </nav>
 
+      <!-- MENU BUTTON -->
+      <button class="menu-btn" onclick="openmenu()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
     <div class="header-text">
   <p><span id="typing"></span></p>
  <h1>
@@ -418,6 +423,7 @@ My goal is to help businesses grow through clean design and efficient web soluti
     <a href="#header" class="top-btn">⬆</a>
 <!-- ================= JavaScript ================= -->
 <script>
+  /* ================= TAB FUNCTION ================= */
   let tablinks = document.getElementsByClassName("tab-links");
   let tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -432,13 +438,30 @@ My goal is to help businesses grow through clean design and efficient web soluti
     document.getElementById(tabname).classList.add("active-tab");
   }
 
+  /* ================= MENU + BLUR ================= */
   let sidemenu = document.getElementById("sidemenu");
+  let overlay = document.getElementById("menu-overlay");
+
   function openmenu() {
     sidemenu.style.right = "0";
+    overlay.classList.add("active"); // blur on
+    document.body.style.overflow = "hidden"; // stop scroll
   }
+
   function closemenu() {
     sidemenu.style.right = "-200px";
+    overlay.classList.remove("active"); // blur off
+    document.body.style.overflow = "auto"; // enable scroll
   }
+
+  /* 🔥 AUTO CLOSE MENU WHEN CLICKING LINKS */
+  const menuLinks = document.querySelectorAll("#sidemenu a");
+
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      closemenu();
+    });
+  });
 </script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
